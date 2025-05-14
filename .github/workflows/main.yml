@@ -23,3 +23,8 @@ jobs:
         run: node auto-bridge.js
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+
+    - name: Upload GitHub Pages artifact
+      uses: actions/upload-pages-artifact@v2
+        with:
+       path: ./dist
